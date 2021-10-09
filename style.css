@@ -1,0 +1,135 @@
+/* Styling sheet for index.html */
+
+body {
+    background-color: lightblue;
+
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 4em;
+    margin-right: 4em;
+
+    padding-top: 2vmin;
+    padding-bottom: 2vmin;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+
+    border-style: solid;
+    border-color:hsl(223, 100%, 17%);
+    border-width: 1px;
+    border-radius: 1cm;
+  }
+  
+h1, h2, h3, p, li, form{
+    font-family: 'Source Sans Pro', sans-serif;
+    color: hsl(223, 100%, 17%);
+    text-align:left;
+    margin: auto;
+}
+
+/* Styling for a */
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color:rgb(0,0,255);
+}
+
+a:active{
+    color:#11005c;
+}
+
+a[href="https://en.wikipedia.org/wiki/Cookie_Monster"]{
+    background-color: yellow;
+}
+
+li b{
+    color: darkgreen;
+}
+
+#monster-pic{
+    width: 20%;
+    height: 15%;
+    max-width: 18in;
+    min-width: 4in;
+}
+
+div.form-class{
+    margin: 1em 2em 0em 2em;
+}
+
+.hidden{
+    display: none;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 5em 30em;
+    justify-items: center;
+}
+
+.grid-item1{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.grid-item2{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.grid-item3{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.grid-item4{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.flex-item{
+    padding: 5px;
+} 
+
+footer{
+    padding: 2em 0em 0em 0em;
+}
+
+span > li{
+    text-decoration: underline;
+}
+
+li:first-of-type + li{
+    color: lightcoral;
+}
+
+div ~ p{
+    color: red;
+}
+
+#role{
+    position: static;
+    padding: 60px 20px 20px 20px;
+}
+
+#display-block{
+    display:block;
+}
+
+#cookie-type{
+    position: absolute;
+    top: 110em;
+    left: 50em;
+}
+
+* {
+    opacity: 1;
+}

@@ -2,14 +2,29 @@
 <html lang="en">
 
     <head>
+        <style>
+            hr {
+                background-color: #11005c;
+                height: 2px;
+            }
+            @media only screen and (min-width: 500px) {
+                body {
+                    background-color: whitesmoke;
+                }
+            }
+        </style>
         <title>CSE 110 Project Meeting Notes</title>
         <meta name="keywords" content="computer science,project,notes,engineering">
         <link rel="icon" type="image/jpg" href="imgs/cookie_icon.jpg">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
-            <h2><em>Cookie Monster Project</em> by Hannah, Ayushi, Melissa & Merve</h2>
+            <h2 style="text-decoration:underline;"><em>Cookie Monster Project</em> by Hannah, Ayushi, Melissa & Merve</h2>
         </header>
 
         <nav>
@@ -18,7 +33,7 @@
                 <li><a href="https://en.wikipedia.org/wiki/Cookie_Monster">About the Project</a></li>
                 <li><a href="./Lab2/index.html">Previous Meeting Notes</a></li>
             </ul>
-            <img src="imgs/cookie_stack.jpg" alt="Cookie Monster">
+            <img id="monster-pic" src="imgs/cookie_stack.jpg" alt="Cookie Monster">
         </nav>
 
         <main>
@@ -35,7 +50,9 @@
 
                 <h3>Agenda</h3>
                 <ol>
-                    <li>Weekly Status Report</li>
+                    <span>
+                        <li>Weekly Status Report</li>
+                    </span>
                     <li>Continuation from Last Meeting</li>
                     <li>New Discussion</li>
                     <li>Questions/Comments/Misc.</li>
@@ -53,10 +70,12 @@
                     <li>Received positive feedback from user <b>Liam</b></li>
                     <li>Demo of new documentation process by Hannah</li>
                 </ul>
-                <div>
-                    <audio controls src="imgs/cookie_audio.m4a"></audio>
+                <div class="grid-container">
+                    <p class="grid-item1">Audio Recording</p>
+                    <p class="grid-item2">Video Recording</p>
+                    <audio class="grid-item3" controls src="imgs/cookie_audio.m4a"></audio>
                     <br>
-                    <video controls  width="640" height="480" src="imgs/cookie_demo.mp4"></video>
+                    <video class="grid-item4" controls width="640" height="480" src="imgs/cookie_demo.mp4"></video>
                 </div>
             
                 <h3>Questions/Comments/Misc.</h3>
@@ -68,50 +87,63 @@
             <section>
                 <h3>Cookie Bag Survey</h3>
                 <form>
-                    <p><label>Name: <input type=text name=size> </label></p>
-                    <p><label>Email: <input type=text name=size> </label></p>
-                    
-                    <fieldset>
-                        <legend> Role </legend>
-                        <p><label> <input type=radio name=size> Student </label></p>
-                        <p><label> <input type=radio name=size> Tutor </label></p>
-                        <p><label> <input type=radio name=size> TA </label></p>
-                        <p><label> <input type=radio name=size> Professor </label></p>
-                    </fieldset>
+                    <div class="form-class">
+                        <div class = "flex-container">
+                            <div class = "flex-item">
+                                <p><label>Name: <input type=text name=size> </label></p>
+                            </div>
+                            <div class = "flex-item">
+                                <p><label>Email: <input type=text name=size> </label></p>
+                            </div>
+                            <div class = "flex-item">
+                                <p><label>When can we deliver a bag of cookies to you? <input type=date name=size> </label></p>
+                            </div>
+                        </div>
+                        
+                        <fieldset id="role">
+                            <legend> Role </legend>
+                            <p><label> <input type=radio name=size> Student </label></p>
+                            <p><label> <input type=radio name=size> Tutor </label></p>
+                            <p><label> <input type=radio name=size> TA </label></p>
+                            <p><label> <input type=radio name=size> Professor </label></p>
+                        </fieldset>
 
-                    <fieldset>
-                        <legend> What kinds of cookies do you like? </legend>
-                        <p><label> <input type=checkbox name=size> Chocolate chip </label></p>
-                        <p><label> <input type=checkbox name=size> Oatmeal raisin </label></p>
-                        <p><label> <input type=checkbox name=size> Snickerdoodle </label></p>
-                        <p><label> <input type=checkbox name=size> Ginger snaps </label></p>
-                        <p><label> <input type=checkbox name=size> Sugar </label></p>
-                        <p><label> <input type=checkbox name=size> Jelly thumbprints </label></p>
-                    </fieldset>
+                        <fieldset id="cookie-type">
+                            <legend> What kinds of cookies do you like? </legend>
+                            <p><label> <input type=checkbox name=size> Chocolate chip </label></p>
+                            <p><label> <input type=checkbox name=size> Oatmeal raisin </label></p>
+                            <p><label> <input type=checkbox name=size> Snickerdoodle </label></p>
+                            <p><label> <input type=checkbox name=size> Ginger snaps </label></p>
+                            <div></div>
+                            <p><label> <input type=checkbox name=size> Sugar </label></p>
+                            <p><label> <input type=checkbox name=size> Jelly thumbprints </label></p>
+                        </fieldset>
+                        
+                        <span>
+                            Any allergies or special delivery considerations?<br>
+                            <textarea></textarea><br>
+                        </span>
+                        <span class = "hidden">
+                            This is a hidden message.
+                        </span>
+                        
+                        <p><label>Ribbon Color: <input type=text name=to list=airports></label></p>
+                        <datalist id=airports>
+                            <option value=red>
+                            <option value=yellow>
+                            <option value=pink>
+                            <option value=brown>
+                            <option value=purple>
+                        </datalist>
 
-                    <p><label>When can we deliver a bag of cookies to you? <input type=date name=size> </label></p>
-                    
-                    <span>
-                        Any allergies or special delivery considerations?<br>
-                        <textarea></textarea><br>
-                    </span>
-                    
-                    <p><label>Ribbon Color: <input type=text name=to list=airports></label></p>
-                    <datalist id=airports>
-                        <option value=red>
-                        <option value=yellow>
-                        <option value=pink>
-                        <option value=brown>
-                        <option value=purple>
-                    </datalist>
-
-                    Note Options:
-                    <select>
-                        <option>Thank you note for you</option>
-                        <option>Custom note for a friend</option>
-                        <option>No Note</option>
-                        <option>A meme</option>
-                    </select>
+                        Note Options:
+                        <select>
+                            <option>Thank you note for you</option>
+                            <option>Custom note for a friend</option>
+                            <option>No Note</option>
+                            <option>A meme</option>
+                        </select>
+                    </div>
 
                     <br>
                     <button>Click to Submit!</button>
@@ -129,8 +161,9 @@
 
         <footer>
             <p><b>Contact Info:</b> contact@cookiemonster.io
-               <br>
-               <i>Thank you for taking some time to look at our project!</i></p>
+               <i id="display-block">Thank you for taking some time to look at our project!</i>
+               <b></b>
+            </p>
         </footer>
 
     </body>
